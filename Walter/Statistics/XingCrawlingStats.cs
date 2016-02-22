@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace Walter.Statistics
         public void ProcessCrawledPage(CrawledPage crawledPage)
         {
             var uri = crawledPage.Uri.AbsoluteUri;
+            Console.WriteLine($"Url: {uri}, All: {CountOfCrawledPagesContainingSpecificKeyword}, Xing: {CountOfCrawledPagesContainingSpecificDetails}");
             var queryParts = crawledPage.Uri.Query.Replace("?", "").Split('&');
             foreach (var queryPart in queryParts)
             {

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Walter", "Walter\Walter.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Walter.Tests", "Walter.AcceptanceTests\Walter.Tests.csproj", "{A04C4423-9B60-4F8B-BAFD-95E05481A59F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Walter.Console", "Walter.Console\Walter.Console.csproj", "{8FE1F3AB-D304-44FD-A5ED-EC0BCFEE506F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,14 @@ Global
 		{A04C4423-9B60-4F8B-BAFD-95E05481A59F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A04C4423-9B60-4F8B-BAFD-95E05481A59F}.Release|x86.ActiveCfg = Release|x86
 		{A04C4423-9B60-4F8B-BAFD-95E05481A59F}.Release|x86.Build.0 = Release|x86
+		{8FE1F3AB-D304-44FD-A5ED-EC0BCFEE506F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FE1F3AB-D304-44FD-A5ED-EC0BCFEE506F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FE1F3AB-D304-44FD-A5ED-EC0BCFEE506F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8FE1F3AB-D304-44FD-A5ED-EC0BCFEE506F}.Debug|x86.Build.0 = Debug|Any CPU
+		{8FE1F3AB-D304-44FD-A5ED-EC0BCFEE506F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FE1F3AB-D304-44FD-A5ED-EC0BCFEE506F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FE1F3AB-D304-44FD-A5ED-EC0BCFEE506F}.Release|x86.ActiveCfg = Release|Any CPU
+		{8FE1F3AB-D304-44FD-A5ED-EC0BCFEE506F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
