@@ -1,6 +1,6 @@
 using Abot.Poco;
 
-namespace Walter
+namespace Walter.Statistics
 {
     public interface ICrawlingStats
     {

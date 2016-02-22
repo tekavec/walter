@@ -1,8 +1,9 @@
 ﻿using System;
 using NSubstitute;
 using NUnit.Framework;
+using Walter.Statistics;
 
-namespace Walter.AcceptanceTests
+namespace Walter.AcceptanceTests.EndToEndTests
 {
     [TestFixture]
     public class WebCrawlerShould

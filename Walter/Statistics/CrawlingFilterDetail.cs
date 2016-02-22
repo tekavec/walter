@@ -1,4 +1,4 @@
-﻿namespace Walter
+﻿namespace Walter.Statistics
 {
     public class CrawlingFilterDetail : ICrawlingFilterDetail
     {

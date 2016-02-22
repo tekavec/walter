@@ -87,12 +87,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CrawlingFilterDetail.cs" />
-    <Compile Include="ICrawlingFilterDetail.cs" />
-    <Compile Include="ICrawlingStats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statistics\CrawlingFilterDetail.cs" />
+    <Compile Include="Statistics\ICrawlingFilterDetail.cs" />
+    <Compile Include="Statistics\ICrawlingStats.cs" />
+    <Compile Include="Statistics\XingCrawlingStats.cs" />
     <Compile Include="WebCrawler.cs" />
-    <Compile Include="XingCrawlingStats.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -4,8 +4,9 @@ using System.Reflection;
 using Abot.Poco;
 using NSubstitute;
 using NUnit.Framework;
+using Walter.Statistics;
 
-namespace Walter.AcceptanceTests
+namespace Walter.AcceptanceTests.UnitTests
 {
     [TestFixture]
     public class XingCrawlingStatsShould

@@ -1,7 +1,7 @@
 using System.Linq;
 using Abot.Poco;
 
-namespace Walter
+namespace Walter.Statistics
 {
     public class XingCrawlingStats : ICrawlingStats
     {

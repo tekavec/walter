@@ -2,6 +2,7 @@
 using System.Net;
 using Abot.Crawler;
 using Abot.Poco;
+using Walter.Statistics;
 
 namespace Walter
 {
