@@ -51,6 +51,18 @@ namespace Walter.AcceptanceTests.UnitTests
             Assert.AreEqual(1, crawlingStats.CountOfCrawledPagesContainingSpecificDetails);
         }
 
+        [Test]
+        public void ignore_duplicated_pages()
+        {
+            ICrawlingStats crawlingStats = new XingCrawlingStats(new[] { "jobdetail" }, _crawlingFilterDetail);
+            var page = new CrawledPage(new Uri("https://www.xn--jobbrse-d1a.com/jobdetail/?rid=101496772&qid=36120&fid=97&_uri=am9idGl0bGU9TWFya2V0aW5nJnJhZGl1cz0xMCZjb3VudHJ5PSZjYXRlZ29yeT0mYWdlbmN5PTAmY2FyZWVyPSZwYXJ0dGltZT0wJnNvcnQ9ZGF0ZSZwYWdlPTEmcnBwPTEwJmRhdGU9JnFkYXRlPTIwMTYtMDItMjImam9iaWQ9MSZ0b3RhbD0yNzI1Mw=="));
+
+            crawlingStats.ProcessCrawledPage(page);
+            crawlingStats.ProcessCrawledPage(page);
+
+            Assert.AreEqual(1, crawlingStats.CountOfCrawledPagesContainingSpecificKeyword);
+        }
+
         private string GetFileContent(string fileName)
         {
             if (!File.Exists(fileName))
