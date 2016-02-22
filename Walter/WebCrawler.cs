@@ -7,11 +7,12 @@ namespace Walter
 {
     public class WebCrawler
     {
+        private readonly ICrawlingStats _crawlingStats;
         private readonly PoliteWebCrawler _webCrawler;
-        public event EventHandler RaisePageCrawlCompletedAsync;
 
-        public WebCrawler()
+        public WebCrawler(ICrawlingStats crawlingStats)
         {
+            _crawlingStats = crawlingStats;
             _webCrawler = new PoliteWebCrawler();
             _webCrawler.PageCrawlCompletedAsync += ProcessPageCrawlCompleted;
         }
@@ -20,8 +21,7 @@ namespace Walter
         {
             if (e.CrawledPage.HttpWebResponse != null && e.CrawledPage.HttpWebResponse.StatusCode == HttpStatusCode.OK)
             {
-                RaisePageCrawlCompletedAsync?.Invoke(sender, e);
-                var uri = e.CrawledPage.Uri;
+                _crawlingStats.ProcessCrawledPage(e.CrawledPage);
             }
         }
 

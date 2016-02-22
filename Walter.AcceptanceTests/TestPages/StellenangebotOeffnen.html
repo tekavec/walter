@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jobbörse</title>
+<meta charset="utf-8"><script pagespeed_orig_type="text/javascript" type="text/psajs" orig_index="0">(window.NREUM||(NREUM={})).loader_config={xpid:"XAQAWVBaGwcEUVBVBQg="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function s(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);return i}function c(t,e){d[t]=f(t).concat(e)}function f(t){return d[t]||[]}function u(){return r(s)}var d={};return{on:c,emit:s,create:u,listeners:f,context:e,_events:d}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:25,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(1),t(2),"addEventListener"in window&&t(3),a.xhrWrappable&&t(4),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:26,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").create(),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:27,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:27,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:27,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:27,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,l,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-",o)}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:27,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=this.lastSize||n(t);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t){var e=t.responseType,n="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return r(n)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),l=t(3),p=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=0,l&&(l>34||10>l)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof p&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:16,4:12,5:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:25,2:26,handle:"D5DuLP"}],16:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),p=e.exports={offset:i(),origin:u,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var h=0},{1:25,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],25:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],26:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],27:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(l){throw f(e+"err",[n,i,l],s),l}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:26,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"/>
+<link rel="stylesheet" href="/assets/css/jobboerse.min.css"/>
+</head>
+<body><noscript><meta HTTP-EQUIV="refresh" content="0;url='https://www.xn--jobbrse-d1a.com/jobdetail/?rid=100969781&amp;qid=4449048&amp;fid=66&amp;_uri=am9idGl0bGU9QUJBUCtBbndlbmR1bmdzZW50d2lja2xlciZyYWRpdXM9MTAmc29ydD1kYXRlJnBhZ2U9MSZycHA9MTAmcWRhdGU9MjAxNi0wMi0wNyZqb2JpZD01JnRvdGFsPTk3Mg==&amp;PageSpeed=noscript'" /><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a href="https://www.xn--jobbrse-d1a.com/jobdetail/?rid=100969781&amp;qid=4449048&amp;fid=66&amp;_uri=am9idGl0bGU9QUJBUCtBbndlbmR1bmdzZW50d2lja2xlciZyYWRpdXM9MTAmc29ydD1kYXRlJnBhZ2U9MSZycHA9MTAmcWRhdGU9MjAxNi0wMi0wNyZqb2JpZD01JnRvdGFsPTk3Mg==&amp;PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript>
+<script type="text/psajs" orig_index="1">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-1727262-1','auto');ga('set','anonymizeIp',true);ga('send','pageview');</script>
+<script type="text/psajs" orig_index="2">var _comscore=_comscore||[];_comscore.push({c1:"2",c2:"6193251"});(function(){var s=document.createElement("script"),el=document.getElementsByTagName("script")[0];s.async=true;s.src=(document.location.protocol=="https:"?"https://sb":"http://b")+".scorecardresearch.com/beacon.js";el.parentNode.insertBefore(s,el);})();</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&c2=6193251&cv=2.0&cj=1" pagespeed_url_hash="3193119279"/>
+</noscript>
+<div class="off-canvas-wrap">
+<div class="inner-wrap">
+<div id="top_nav_container" class="contain-to-grid sticky show-for-small-only" style="">
+<nav class="top-bar" data-topbar>
+<section class="top-bar-section">
+<div class="row hide" data-header="1">
+<div id="mobile_logo" class="small-8 small-offset-2 columns padding-none"></div>
+<div class="small-1 columns padding-none text-center">
+<a rel="nofollow" href="#" id="job_search_mobile_modal"><script pagespeed_no_defer="">//<![CDATA[
+(function(){var g=this,h=function(b,d){var a=b.split("."),c=g;a[0]in c||!c.execScript||c.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===d?c[e]?c=c[e]:c=c[e]={}:c[e]=d};var l=function(b){var d=b.length;if(0<d){for(var a=Array(d),c=0;c<d;c++)a[c]=b[c];return a}return[]};var m=function(b){var d=window;if(d.addEventListener)d.addEventListener("load",b,!1);else if(d.attachEvent)d.attachEvent("onload",b);else{var a=d.onload;d.onload=function(){b.call(this);a&&a.call(this)}}};var n,p=function(b,d,a,c,e){this.f=b;this.h=d;this.i=a;this.c=e;this.e={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.g=c;this.b={};this.a=[];this.d={}},q=function(b,d){var a,c,e=d.getAttribute("pagespeed_url_hash");if(a=e&&!(e in b.d))if(0>=d.offsetWidth&&0>=d.offsetHeight)a=!1;else{c=d.getBoundingClientRect();var f=document.body;a=c.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);c=c.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+c;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.e.height&&c<=b.e.width)}a&&(b.a.push(e),b.d[e]=!0)};p.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&q(this,b)};h("pagespeed.CriticalImages.checkImageForCriticality",function(b){n.checkImageForCriticality(b)});h("pagespeed.CriticalImages.checkCriticalImages",function(){r(n)});var r=function(b){b.b={};for(var d=["IMG","INPUT"],a=[],c=0;c<d.length;++c)a=a.concat(l(document.getElementsByTagName(d[c])));if(0!=a.length&&a[0].getBoundingClientRect){for(c=0;d=a[c];++c)q(b,d);a="oh="+b.i;b.c&&(a+="&n="+b.c);if(d=0!=b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),c=1;c<b.a.length;++c){var e=","+encodeURIComponent(b.a[c]);131072>=a.length+e.length&&(a+=e)}b.g&&(e="&rd="+encodeURIComponent(JSON.stringify(s())),131072>=a.length+e.length&&(a+=e),d=!0);t=a;if(d){c=b.f;b=b.h;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(k){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(u){}}f&&(f.open("POST",c+(-1==c.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}},s=function(){var b={},d=document.getElementsByTagName("IMG");if(0==d.length)return{};var a=d[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var c=0;a=d[c];++c){var e=a.getAttribute("pagespeed_url_hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].k&&a.height>=b[e].j)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b},t="";h("pagespeed.CriticalImages.getBeaconData",function(){return t});h("pagespeed.CriticalImages.Run",function(b,d,a,c,e,f){var k=new p(b,d,a,e,f);n=k;c&&m(function(){window.setTimeout(function(){r(k)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','https://www.xn--jobbrse-d1a.com/jobdetail/?rid=100969781&qid=4449048&fid=66&_uri=am9idGl0bGU9QUJBUCtBbndlbmR1bmdzZW50d2lja2xlciZyYWRpdXM9MTAmc29ydD1kYXRlJnBhZ2U9MSZycHA9MTAmcWRhdGU9MjAxNi0wMi0wNyZqb2JpZD01JnRvdGFsPTk3Mg==','FyYiX3OWz2',true,false,'5DP1puLHHQo');
+//]]></script><img src="/assets/css/lib/fonts/ico_search.svg" pagespeed_url_hash="4223723163" data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);" onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)"/></a>
+</div>
+<div class="small-1 columns padding-none text-center mobile-menu-trigger">
+<a rel="nofollow" href="#" class="header-mobile-menu-button"><img src="/assets/css/lib/fonts/ico_menu_burger.svg" pagespeed_url_hash="3830339394" data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);" onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)"/></a>
+</div>
+</div>
+<div class="row hide" data-header="2">
+<div class="small-12 column" id="filtern-header-container">
+<div class="small-2 columns padding-none">
+<h4 class="inline-block padding-left-03"><a rel="nofollow" id="mobile_filters" href="#">Filtern</a></h4>
+</div>
+<div class="small-8 columns padding-none text-center">
+<h5><span id="job_label" class="round alert label">0 Jobs</span></h5>
+</div>
+<div class="small-1 columns padding-none text-center">
+<a rel="nofollow" href="#" id="job_search_mobile_modal"><img src="/assets/css/lib/fonts/ico_search.svg" pagespeed_url_hash="4223723163" data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);" onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)"/></a>
+</div>
+<div class="small-1 columns padding-none text-center mobile-menu-trigger">
+<a rel="nofollow" href="#" class="header-mobile-menu-button"><img src="/assets/css/lib/fonts/ico_menu_burger.svg" pagespeed_url_hash="3830339394" data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);" onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)"/></a>
+</div>
+</div>
+</div>
+<div class="row hide" data-header="3">
+<div class="small-12 column padding-left-right-093">
+<div class="small-3 columns padding-none">
+<h4 class="inline-block"><a id="mobile_results" href="#">zurück</a></h4>
+</div>
+<div class="small-6 columns padding-none text-center" id="header_filter_mobile">
+<h5><span id="job_label" class="round alert label">0 Jobs</span></h5>
+</div>
+<div class="small-3 columns padding-none text-right">
+<h4 class="inline-block"><a id="mobile_results" class="mobile-filter-search-button" href="#">anzeigen</a></h4>
+</div>
+</div>
+</div>
+<div class="row hide" data-header="4">
+<div class="small-12 column padding-left-right-093">
+<div class="small-3 columns padding-none">
+<h4 class="inline-block">
+<a id="mobile_results" href="/jobs/?jobtitle=ABAP+Anwendungsentwickler">Liste</a>
+</h4>
+</div>
+<div class="small-7 columns padding-none text-center" id="header_filter_mobile">
+<span id="job_label" class="font-normal">5</span>
+<span id="job_label" class="font-normal text-dark-grey">| 972</span>
+</div>
+<div class="small-2 columns padding-none text-right">
+<a rel="nofollow" href="#" class="info-jobdetail"><img src="/assets/css/lib/fonts/ico_info.svg" class="width-max-2" pagespeed_url_hash="682130265" data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);" onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)"/></a>
+</div>
+</div>
+</div>
+</section>
+</nav>
+</div>
+<div class="row job-detail-page" itemscope itemtype="http://schema.org/JobPosting">
+<div id="divMobileContent" class="row show-for-small-only" style="margin-left: 0.8rem;margin-right: 0.8rem; overflow-x: hidden !important;overflow-y:scroll !important; -webkit-overflow-scrolling:touch !important; ">
+<div class="row" style=''>
+<div class="large-12 columns job_attribute_matched">
+<div class="row">
+<div class="large-12 columns text-center">
+<a href="http://stellenanzeige.monster.de/getjob.aspx?JobID=163285199&LogGetJobChannelID=6996&WT.mc_n=olm_sk_feed_xml_icjobs_viv_de" target="_blank">
+<img src="/lib/output_image@4x.php?key=100969781" style="padding:10px;" id="thumbnail" pagespeed_url_hash="3928585565" data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);" onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)"/>
+<i class="fa fa-expand fa-2x" style="position: absolute;bottom: 15px;right: 40px;z-index: 3;width: 30px;height: 30px;background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%;border-radius: 3px;padding: 1px;color: #FFF;text-decoration: none;"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="small-12 columns">
+<h5 class="left job-title" itemprop="title">SAP ABAP Entwickler/SAP ABAP Entwicklerin (ABP_20051596)</h5>
+</div>
+<div class="small-12 columns">
+<span itemprop="hiringOrganization" itemscope="" itemtype="http://schema.org/Organization"><span itemprop="name"><strong>Bundesamt für Informatik und Telekommunikation BIT</strong></span></span> / <span itemprop="jobLocation" itemscope itemtype="http://schema.org/Place"><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Bern</span></span></span> </div>
+<div class="small-12 columns" style="padding-top:5px;">
+Benefits: <span itemprop="jobBenefits">
+fortschrittliche Sozialleistungen &middot; Kinderbetreuung </span>
+<br/>
+<span itemprop="skills">
+ABAP &middot; Fachwissen &middot; Integrationskenntnisse &middot; Java &middot; SAP &middot; Englischkenntnisse
+</span>
+<span itemprop="experienceRequirements">
+&middot; Datenschutz &middot; Datensicherheit &middot; Design &middot; Informatik
+</span>
+<span itemprop="responsibilities">
+&middot; Einführung neuer Technologien &middot; Fehleranalysen &middot; Qualitätssicherung &middot; SAP Entwicklung &middot; Support
+</span>
+<span itemprop="qualifications">
+&middot; Eigeninitiative &middot; Ergebnisorientierung
+</span>
+</div>
+</div>
+</div>
+<div class="row text-center hide-for-small-only" style="margin-bottom: -1.5rem;margin-left: 0rem;">
+<div id="job_detail_prev_button" class="job-detail-buttons job-detail-nav" style="background:url(/assets/css/lib/fonts/ico_arrow_left.svg) center no-repeat #bedc3a;position:fixed" attr="/jobdetail/?rid=100968870&qid=36120&fid=99&_uri=am9idGl0bGU9QUJBUCtBbndlbmR1bmdzZW50d2lja2xlciZyYWRpdXM9MTAmc29ydD1kYXRlJnBhZ2U9MSZycHA9MTAmcWRhdGU9MjAxNi0wMi0wNyZqb2JpZD00JnRvdGFsPTk3Mg=="></div>
+<script type="text/psajs" orig_index="3">//<![CDATA[
+(function(){window.pagespeed=window.pagespeed||{};var b=window.pagespeed,c=function(){};c.prototype.a=function(){var a=document.getElementsByTagName("pagespeed_iframe");if(0<a.length){for(var a=a[0],f=document.createElement("iframe"),d=0,e=a.attributes,g=e.length;d<g;++d)f.setAttribute(e[d].name,e[d].value);a.parentNode.replaceChild(f,a)}};c.prototype.convertToIframe=c.prototype.a;b.b=function(){b.deferIframe=new c};b.deferIframeInit=b.b;})();
+pagespeed.deferIframeInit();
+//]]></script><pagespeed_iframe id="jobdetail-iframe" style="height: 10rem;" src="/jobdetail/jobdetail_frame.php?rid=100969781"><script pagespeed_orig_type="text/javascript" type="text/psajs" orig_index="4">
+pagespeed.deferIframe.convertToIframe();</script></pagespeed_iframe>
+<div id="job_detail_next_button" class="job-detail-buttons job-detail-nav" style="background:url(/assets/css/lib/fonts/ico_arrow_right.svg) center no-repeat #bedc3a;position:fixed" attr="/jobdetail/?rid=100959573&qid=44153&fid=16&_uri=am9idGl0bGU9QUJBUCtBbndlbmR1bmdzZW50d2lja2xlciZyYWRpdXM9MTAmc29ydD1kYXRlJnBhZ2U9MSZycHA9MTAmcWRhdGU9MjAxNi0wMi0wNyZqb2JpZD02JnRvdGFsPTk3Mg=="></div>
+</div>
+<div class="row iframe-buttons hide-for-small-only" style="font-size: 0.8rem; position: fixed;" data-equalizer>
+<div class="small-2 medium-2 columns iframe-button-normal" data-equalizer-watch>
+<a href="/jobs/?jobtitle=ABAP+Anwendungsentwickler" target="_self"><i class="fa fa-arrow-left"></i>
+Zurück zur Liste</a>
+</div>
+<div class="small-2 medium-2 columns iframe-button-normal" data-equalizer-watch>
+<a href="#" data-reveal-id="feedback-modal"><i class="fa fa-level-down"></i>
+Feedback</a>
+</div>
+<div class="small-2 medium-2 columns iframe-button-upped-container padding-none">
+<div class="medium-12 columns empty-space"></div>
+<div class="medium-12 columns iframe-button-upped padding-left-none padding-right-none">
+<a href="https://lebenslauf.jobbörse.com" target="_blank"><i class="fa fa-file-text-o"></i>
+Lebenslauf erstellen</a>
+</div>
+</div>
+<div class="small-2 medium-2 columns iframe-button-normal" data-equalizer-watch>
+<a href="#" attr="100969781|U0FQIEFCQVAgRW50d2lja2xlci9TQVAgQUJBUCBFbnR3aWNrbGVyaW4gKEFCUF8yMDA1MTU5Nik=" from="bookmark" uri="cmFkaXVzPTEwJnNvcnQ9ZGF0ZSZwYWdlPTEmcnBwPTEwJnFkYXRlPTIwMTYtMDItMDc=" class="bookmark-job-not-logged-in">
+<i class="fa fa-star-o" id="dstar100969781" attr="100969781|U0FQIEFCQVAgRW50d2lja2xlci9TQVAgQUJBUCBFbnR3aWNrbGVyaW4gKEFCUF8yMDA1MTU5Nik="></i>
+<span id="star_span100969781">Job merken </span>
+</a>
+</div>
+<div class="small-2 medium-2 columns iframe-button-normal" data-equalizer-watch>
+<a href="http://stellenanzeige.monster.de/getjob.aspx?JobID=163285199&LogGetJobChannelID=6996&WT.mc_n=olm_sk_feed_xml_icjobs_viv_de" target="_blank"><i class="fa fa-link"></i>
+Original Link öffnen</a>
+</div>
+</div>
+<div class="row small-fixed-bottom" id="jobdetail_footer">
+<div class="small-12 show-for-small-only" style="padding-bottom: 0">
+<a itemprop="url" href="http://stellenanzeige.monster.de/getjob.aspx?JobID=163285199&LogGetJobChannelID=6996&WT.mc_n=olm_sk_feed_xml_icjobs_viv_de" target="_blank" class="button" style="width: 100%;margin-bottom:0">Job anzeigen</a>
+</div>
+<div class="small-4 medium-4 columns text-right padding-left-none">&nbsp;
+<a href="#"><img src="/assets/css/lib/fonts/ico_arrow_left.svg" class="job-detail-nav show-for-small-only" style="min-width: 4rem;max-width:4rem;" attr="/jobdetail/?rid=100968870&qid=36120&fid=99&_uri=am9idGl0bGU9QUJBUCtBbndlbmR1bmdzZW50d2lja2xlciZyYWRpdXM9MTAmc29ydD1kYXRlJnBhZ2U9MSZycHA9MTAmcWRhdGU9MjAxNi0wMi0wNyZqb2JpZD00JnRvdGFsPTk3Mg==" pagespeed_url_hash="883404060" data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);" onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)"/></a>
+</div>
+<div class="small-4 medium-4 columns ">
+<div class="hide-for-small-only text-right">
+<img class="hide-for-small-only " style="max-width:100%;max-height:100%;margin:0px auto;height:76px;" src="/assets/css/img/xing_logo_jobboerse@2x.png" height="70%" pagespeed_url_hash="2180217541" data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);" onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)">
+</div>
+<div class="show-for-small-only text-center">
+<a href="#" attr="100969781|U0FQIEFCQVAgRW50d2lja2xlci9TQVAgQUJBUCBFbnR3aWNrbGVyaW4gKEFCUF8yMDA1MTU5Nik=" class="bookmark-job-not-logged-in" from="bookmark">
+<img src="/assets/css/lib/fonts/ico_star_blue.svg" class="show-for-small-only width-max-4" attr="100969781|U0FQIEFCQVAgRW50d2lja2xlci9TQVAgQUJBUCBFbnR3aWNrbGVyaW4gKEFCUF8yMDA1MTU5Nik=" id="mstar100969781" pagespeed_url_hash="3107174060" data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);" onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)"/>
+</a>
+</div>
+</div>
+<div class="small-4 medium-4 columns text-left">
+<div class="row hide-for-small-only">
+<div class="small-1 medium-1 columns text-center ">
+<a href="#"><img src="/assets/css/lib/fonts/ico_arrow_left.svg" class="job-detail-nav iframe-button-normal" style="min-width: 2rem;max-width:2rem;border-radius: 0.5rem 0rem 0rem 0.5rem;" attr="/jobdetail/?rid=100968870&qid=36120&fid=99&_uri=am9idGl0bGU9QUJBUCtBbndlbmR1bmdzZW50d2lja2xlciZyYWRpdXM9MTAmc29ydD1kYXRlJnBhZ2U9MSZycHA9MTAmcWRhdGU9MjAxNi0wMi0wNyZqb2JpZD00JnRvdGFsPTk3Mg==" pagespeed_url_hash="883404060" data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);" onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)"/></a>
+</div>
+<div class="small-6 medium-6 columns text-center padding-left-none padding-right-none" style="padding-top:1.5rem"> <strong>5</strong> | 972 </div>
+<div class="small-1 medium-1 columns text-left padding-left-none padding-right-none">
+<a href="#"><img src="/assets/css/lib/fonts/ico_arrow_right.svg" class="job-detail-nav iframe-button-normal" style="min-width: 2rem;max-width:2rem;border-radius: 0rem 0.5rem 0.5rem 0rem;" attr="/jobdetail/?rid=100959573&qid=44153&fid=16&_uri=am9idGl0bGU9QUJBUCtBbndlbmR1bmdzZW50d2lja2xlciZyYWRpdXM9MTAmc29ydD1kYXRlJnBhZ2U9MSZycHA9MTAmcWRhdGU9MjAxNi0wMi0wNyZqb2JpZD02JnRvdGFsPTk3Mg==" pagespeed_url_hash="332101651" data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);" onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)"/></a>
+</div>
+</div>
+<a href="#"><img src="/assets/css/lib/fonts/ico_arrow_right.svg" class="job-detail-nav show-for-small-only" style="min-width: 4rem;max-width:4rem;" attr="/jobdetail/?rid=100959573&qid=44153&fid=16&_uri=am9idGl0bGU9QUJBUCtBbndlbmR1bmdzZW50d2lja2xlciZyYWRpdXM9MTAmc29ydD1kYXRlJnBhZ2U9MSZycHA9MTAmcWRhdGU9MjAxNi0wMi0wNyZqb2JpZD02JnRvdGFsPTk3Mg==" pagespeed_url_hash="332101651" data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);" onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)"/></a>
+</div>
+</div>
+</div>
+<div id="feedback-modal" class="reveal-modal small" data-reveal data-options="close_on_background_click: false;">
+<br/>
+<h4>Feedback</h4>
+<br/>
+<div class="row" id="feedback-content">
+<div class="medium-12 columns">
+<input type="radio" name="type" class="type" value="1">&nbsp; Dies ist kein Stellenangebot<br/>
+<input type="radio" name="type" class="type" value="2">&nbsp; Die Berufsbezeichnung ist inkorrekt<br/>
+<input type="radio" name="type" class="type" value="3">&nbsp; Kontaktdetails sind inkorrekt<br/>
+<input type="radio" name="type" class="type" value="4">&nbsp; Etwas anderes stimmt nicht <br/>
+</div>
+<div class="medium-12 columns">
+<textarea placeholder="Fehlerbeschreibung" rows="5" id="feedback"></textarea>
+</div>
+<div class="medium-12 columns">
+<input type="radio" name="type" class="type" value="5" checked="checked">&nbsp; Alles ist in Ordnung
+</div>
+<div class="medium-12 columns">
+Für eventuelle Rückfragen kannst Du Deine Kontaktdaten hinterlassen.
+<br/>
+</div>
+<div class="small-12 medium-6 columns">
+<input type="text" placeholder="Name" id="name_1" value=""/>
+</div>
+<div class="small-12 medium-6 columns">
+<input type="text" placeholder="Vorname" id="name_2" value=""/>
+</div>
+<div class="small-12 medium-6 columns end">
+<input type="text" placeholder="E-mail" id="email" value=""/>
+</div>
+<div class="medium-12 columns">
+<a href="" class="button tiny" id="feedback-button" attr="100969781">Senden</a>
+</div>
+</div>
+<a class="close-reveal-modal">&#215;</a>
+</div> <div id="mobile_right_info" class="reveal-modal medium mobile-modals padding-none" data-reveal aria-hidden="true" role="dialog">
+<div class="row">
+<div class="small-12 columns padding-none mobile-column-list-header">
+<ul class="custom-list one-column-list">
+<li>
+<div class="small-12 columns padding-row-header-mobile">
+<a data-reveal-id="feedback-modal">Feedback</a>
+</div>
+</li>
+<li>
+<div class="small-12 columns padding-row-header-mobile">
+<a target="_blank" href="https://lebenslauf.jobbörse.com">
+Lebenslauf erstellen
+</a>
+</div>
+</li>
+<li>
+<div class="small-12 columns padding-row-header-mobile">
+<a target="_blank" href="http://stellenanzeige.monster.de/getjob.aspx?JobID=163285199&LogGetJobChannelID=6996&WT.mc_n=olm_sk_feed_xml_icjobs_viv_de">Original Link öffnen</a>
+</div>
+</li>
+<li>
+<div class="small-12 columns padding-row-header-mobile">
+<a target="_blank" href="http://monster.com">Quelle</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="login-modal" class="reveal-modal modal-size" data-reveal data-options="close_on_background_click: false;">
+<div class="row">
+<div class="small-12 columns">
+<h4>Login/Registrierung</h4>
+Lege jetzt Dein Jobbörse.com Account an und profitiere von allen kostenlosen Services!
+<br/><br/>
+</div>
+</div>
+<div id="login-error" class="alert-box warning hidden ">
+<div class="row">
+<div class="small-1 columns">
+<i class="fi-info size-large white"></i>
+</div>
+<div class="small-11 columns" id="login-error-message">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="large-12 columns">
+<input type="text" placeholder="E-Mail-Adresse" id="username"/>
+</div>
+<div class="large-12 columns">
+<input type="password" placeholder="Passwort" id="password"/>
+</div>
+</div>
+<div class="row">
+<div class="small-12 columns smaller-size">
+<input type="checkbox" checked id="autologin"> Angemeldet bleiben
+</div>
+</div>
+<div class="row">
+<div class="small-12 columns">
+<a href="#" data-reveal-id="password-forget-modal">Passwort vergessen?</a>
+<br/><br/>
+</div>
+</div>
+<div class="row">
+<div class="small-12 medium-6 columns">
+<input type="hidden" id="login-from" value=""/>
+<input type="hidden" id="login-uri" value=""/>
+<input type="hidden" id="login-rid" value=""/>
+<input type="submit" class="button expand" value="Einloggen" id="login-submit"/>
+</div>
+<div class="small-12 medium-6 columns text-right">
+<a href="#" class="button expand" id="btnRegister">Registrieren</a>
+</div>
+</div>
+<a class="close-reveal-modal">&#215;</a>
+</div>
+<div id="register-modal" class="reveal-modal small" data-reveal data-options="close_on_background_click: false;">
+<h4>Registrierung für Jobsuchende</h4>
+<div class="row">
+<div class="small-12 columns">
+<div id="register-error" class="alert-box warning hidden ">
+<div class="row">
+<div class="small-1 columns">
+<i class="fi-info size-large white"></i>
+</div>
+<div class="small-11 columns" id="register-error-message">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="small-12 medium-6 columns">
+<input type="text" placeholder="Vorname*" id="register-firstname"/>
+</div>
+<div class="small-12 medium-6 columns">
+<input type="text" placeholder="Nachname*" id="register-lastname"/>
+</div>
+</div>
+<div class="row">
+<div class="medium-6 columns hide-for-small">
+</div>
+<div class="small-12 medium-6 columns">
+<input type="text" placeholder="E-Mail*" id="register-email"/>
+</div>
+</div>
+<div class="row">
+<div class="small-12 medium-6 columns">
+<input type="password" placeholder="Passwort*" id="register-password"/>
+</div>
+<div class="small-12 medium-6 columns">
+<input type="password" placeholder="Passwort erneut eingeben*" id="register-password2"/>
+</div>
+</div>
+<div class="row">
+<div class="small-12 columns">
+<p> Indem Du auf "Abschicken" klickst, erklärst Du Dich mit unseren <a href="/sale/B2C_AGB_XING-AG_Jobboerse_com.pdf" target="_blank">AGBs</a>
+und <a href="/sale/privacy_XING-AG_Jobboerse_com.pdf" target="_blank">Datenschutzbestimmungen</a> einverstanden.</p>
+</div>
+</div>
+<div class="row">
+<div class="small-12 columns text-left">
+<input type="hidden" id="register-from" value=""/>
+<input type="hidden" id="register-uri" value=""/>
+<input type="hidden" id="register-rid" value=""/>
+<a href="#" class="button small" id="register-submit">Abschicken</a>
+</div>
+</div>
+</div>
+</div>
+<a class="close-reveal-modal">&#215;</a>
+</div>
+<div id="password-forget-modal" class="reveal-modal tiny" data-reveal data-options="close_on_background_click: false;">
+<div class="row">
+<div class="small-12 columns" id="recover-content">
+<div class="row">
+<div class="small-12 columns">
+<h4>Du hast Dein Passwort vergessen?</h4>
+Bitte gib Deine E-Mail-Adresse ein. Wir senden Dir einen Link zum Zurücksetzen Deines Passwortes.
+<br/><br/>
+</div>
+</div>
+<div id="password-forget-error" class="alert-box warning hidden ">
+<div class="row">
+<div class="small-1 columns">
+<i class="fi-info size-large white"></i>
+</div>
+<div class="small-11 columns" id="password-forget-error-message">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="small-6 columns">
+<input type="text" placeholder="E-Mail-Adresse*" id="username-recover"/>
+</div>
+</div>
+<div class="row">
+<div class="small-12 columns">
+<a href="#" class="small button" id="recover-button">Senden</a>
+</div>
+</div>
+</div>
+</div>
+<a class="close-reveal-modal">&#215;</a>
+</div>
+<div id="terms-modal" class="reveal-modal modal-size" data-reveal data-options="close_on_background_click: false;">
+<div class="row">
+<div class="small-12 columns">
+<h4>Willkommen!</h4>
+Jobbörse.com ist jetzt ein Service von XING.
+Indem Du auf "Akzeptieren" klickst, erklärst Du
+Dich mit unseren <a href="/sale/B2C_AGB_XING-AG_Jobboerse_com.pdf" target="_blank">AGBs</a> und
+<a href="/sale/privacy_XING-AG_Jobboerse_com.pdf" target="_blank">Datenschutzbestimmungen</a> einverstanden.
+<br/><br/>
+</div>
+</div>
+<div class="row">
+<div class="small-12 medium-6 columns">
+<input type="hidden" id="terms-modal-from" value=""/>
+<input type="hidden" id="terms-modal-uri" value=""/>
+<input type="hidden" id="terms-modal-rid" value=""/>
+<input type="hidden" id="terms-modal-id" value=""/>
+<input type="hidden" id="terms-modal-h" value=""/>
+<input type="hidden" id="terms-modal-auto" value=""/>
+<a href="#" class="button small expand" id="accept-terms">
+Akzeptieren
+</a>
+</div>
+<div class="small-12 medium-6 columns">
+<a href="#" class="button small expand" id="accept-terms-not">
+Nicht akzeptieren
+</a>
+</div>
+</div>
+</div>
+<div id="jobmail-modal" class="reveal-modal tiny" data-reveal data-options="close_on_background_click: false;">
+<div class="row">
+<div class="small-12 columns" id="jobmail-message-content">
+<h4>Jobmail aktivierung</h4>
+Deine Jobmail für <jobtitle> Jobs in <town> wurde erfolgreich aktiviert.
+<br/><br/>
+Deine Jobmails findest Du <a href="/?action=jobmails">hier</a>.
+<br/><br/>
+</div>
+<div class="small-12 columns text-right">
+<a href="#" class="button tiny" id="jobmail-close3">Schließen</a>
+</div>
+</div>
+</div>
+<script pagespeed_orig_type="text/javascript" src="../assets/js/lib/jquery-1.11.2.min.js" type="text/psajs" orig_index="5"></script>
+<script pagespeed_orig_type="text/javascript" src="../assets/js/lib/jquery-ui/jquery-ui.min.js" type="text/psajs" orig_index="6"></script>
+<script pagespeed_orig_type="text/javascript" src="../assets/js/lib/foundation/vendor/modernizr.js" type="text/psajs" orig_index="7"></script>
+<script pagespeed_orig_type="text/javascript" src="../assets/js/lib/foundation/vendor/fastclick.js" type="text/psajs" orig_index="8"></script>
+<script pagespeed_orig_type="text/javascript" src="../assets/js/lib/foundation/foundation.min.js" type="text/psajs" orig_index="9"></script>
+<script pagespeed_orig_type="text/javascript" src="../assets/js/lib/foundation/vendor/modernizr.js" type="text/psajs" orig_index="10"></script>
+<script pagespeed_orig_type="text/javascript" src="../assets/js/app/main.min.js" type="text/psajs" orig_index="11"></script>
+<script type="text/psajs" orig_index="12">$(document).foundation();$(document).ready(function(){var bottom_height=$('.iframe-buttons').outerHeight()+$('.small-fixed-bottom').outerHeight();var height=$(window).height()-bottom_height;var mobileHeaderHeight=$('.row[data-header="4"]').outerHeight();$('#jobdetail-iframe').css('height',height+'px');$('#divMobileContent').css('height',(height-mobileHeaderHeight)+'px');if($('#jobdetail-iframe-mobile'))
+$('#jobdetail-iframe-mobile').css('height',(height-mobileHeaderHeight)+'px');});$(window).resize(function(){var bottom_height=$('.iframe-buttons').outerHeight()+$('.small-fixed-bottom').outerHeight();var height=$(window).height()-bottom_height;var mobileHeaderHeight=$('.row[data-header="4"]').outerHeight();$('#jobdetail-iframe').css('height',height+'px');$('#divMobileContent').css('height',(height-mobileHeaderHeight)+'px');if($('#jobdetail-iframe-mobile'))
+$('#jobdetail-iframe-mobile').css('height',(height-mobileHeaderHeight)+'px');});$(".job-detail-nav").click(function(){var lnk=$(this).attr("attr");window.open(lnk,"_self");});$(document).bind("touchstart",function(e){e.preventDefault();});$(document).bind("touchmove",function(e){e.preventDefault();});if($('#modal_jobmail_jobdetail'))
+$('#modal_jobmail_jobdetail').foundation('reveal','open');</script>
+<script pagespeed_orig_type="text/javascript" type="text/psajs" orig_index="13">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"504388c0c5","applicationID":"4451729","transactionName":"ZAdVMEcHDUJTWkFeWl1NYhZcSQleUF1QQ1RaDhgNWwIGSRxJXUc=","queueTime":0,"applicationTime":246,"atts":"SEBWRg8dHkw=","errorBeacon":"bam.nr-data.net","agent":""}</script><script type="text/javascript" src="/pagespeed_static/js_defer.pbrP1whUgE.js"></script></body>
+</html>
